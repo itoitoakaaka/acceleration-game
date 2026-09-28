@@ -1,30 +1,42 @@
 # acceleration-game
 
-LabVIEW-based program for evaluating trial success based on acceleration trends.
+A LabVIEW-based prototype for trial-by-trial acceleration feedback.
+
+## Project history
+
+The original prototype was developed during my earlier research / coursework period (2023–2024) while learning experimental measurement, DAQ-based acquisition, and real-time feedback design. The repository was organized and published on GitHub later, so the Git commit history reflects the publication / maintenance period rather than the original development period.
 
 ## Overview
 
-This program is designed to monitor and compare acceleration data between successive trials. It provides a visual or logical judgment on whether a trial was "successful" (i.e., achieved faster acceleration than the previous one).
+This program monitors acceleration across repeated trials and compares the current trial with the previous one. It provides a simple success / failure judgment as immediate feedback.
+
+## What this project demonstrates
+
+- LabVIEW-based experimental programming
+- DAQ / sensor-oriented acquisition logic
+- trial-by-trial performance comparison
+- real-time feedback design
+- early experience building human-in-the-loop experimental tools
 
 ## Features
 
-- **Acceleration Comparison**: Tracks maximum or average acceleration across trials.
-- **Success/Failure Judgment**: Real-time feedback based on performance improvement.
-- **LabVIEW GUI**: Visual interface for monitoring sensor data and trial results.
+- **Acceleration comparison**: compares maximum or average acceleration across successive trials
+- **Success / failure judgment**: provides feedback when the current trial improves on the previous trial
+- **LabVIEW GUI**: supports monitoring sensor input and trial results
 
 ## Requirements
 
 - NI LabVIEW 2019 or later
-- Compatible DAQ (Data Acquisition) hardware or simulated acceleration input
-
-## Setup
-
-1. Open `LABVIEW1.vi` in LabVIEW.
-2. Configure your acceleration sensor input channels.
-3. Run the VI.
+- compatible DAQ hardware or simulated acceleration input
 
 ## Usage
 
-1. Start the first trial to establish a baseline.
-2. Perform subsequent trials.
-3. The program will indicate "Success" if the current trial's acceleration exceeds the previous one.
+1. Open `LABVIEW1.vi`.
+2. Configure the acceleration-sensor / DAQ input.
+3. Run the VI.
+4. Use the first trial as the baseline.
+5. Compare subsequent trials with the previous performance.
+
+## Research direction
+
+The basic idea in this prototype—measure a movement variable, evaluate trial performance, and return feedback—later connects naturally to adaptive sensorimotor feedback and human-in-the-loop AI systems.
